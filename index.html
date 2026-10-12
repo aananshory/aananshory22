@@ -1,6 +1,7 @@
 
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,8 +21,26 @@
             font-family: Arial, sans-serif;
         }
 
+        /* Navigasi latihan */
+        .navbar-latihan {
+            background-color: #ffffff;
+            padding: 12px 10px;
+        }
+
+        .navbar-latihan a {
+            color: #0d6efd !important;
+            text-decoration: underline !important;
+            font-size: 16px;
+            margin-right: 8px;
+        }
+
+        .navbar-latihan a:hover {
+            color: #084298 !important;
+        }
+
+        /* Kartu biodata */
         .biodata-card {
-            max-width: 420px;
+            max-width: 650px;
             width: 100%;
             border: none;
             border-radius: 24px;
@@ -29,90 +48,120 @@
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
         }
 
+        /* Header profil */
         .profile-header {
             background: linear-gradient(135deg, #2563eb, #7c3aed);
             color: white;
-            padding: 35px 20px;
+            padding: 40px 20px;
         }
 
         .avatar {
             width: 100px;
             height: 100px;
-            margin: 0 auto 18px;
+            margin: 0 auto 25px;
             display: flex;
             align-items: center;
             justify-content: center;
             border-radius: 50%;
             background: white;
             color: #2563eb;
-            font-size: 38px;
+            font-size: 40px;
             font-weight: bold;
-            border: 4px solid rgba(255, 255, 255, 0.5);
         }
 
+        .profile-name {
+            font-size: clamp(22px, 5vw, 34px);
+            overflow-wrap: anywhere;
+        }
+
+        /* Informasi biodata */
         .info-box {
             background: #f8fafc;
-            padding: 15px;
-            border-radius: 12px;
-            margin-bottom: 14px;
+            padding: 22px;
+            border-radius: 15px;
+            margin-bottom: 18px;
         }
 
         .info-label {
             color: #64748b;
-            font-size: 13px;
-            margin-bottom: 5px;
+            font-size: 16px;
+            margin-bottom: 8px;
         }
 
         .info-value {
             color: #0f172a;
+            font-size: 20px;
             font-weight: 600;
             overflow-wrap: anywhere;
         }
 
         .footer-text {
-            font-size: 12px;
+            font-size: 14px;
             color: #94a3b8;
+        }
+
+        /* Penyesuaian untuk HP */
+        @media (max-width: 576px) {
+            .profile-header {
+                padding: 35px 18px;
+            }
+
+            .card-body {
+                padding: 28px !important;
+            }
+
+            .info-box {
+                padding: 18px;
+            }
+
+            .info-value {
+                font-size: 18px;
+            }
         }
     </style>
 </head>
 
 <body>
-  <section>
-    <a href="lat41.html"> Latihan P4-1 </a>
-    <a href="lat42.html"> Latihan P4-2 </a>
-  </section>
 
-    <div class="container min-vh-100 d-flex
-                justify-content-center align-items-center py-4">
+    <!-- Navigasi Latihan -->
+    <nav class="navbar-latihan">
+        <a href="./lat41.html">Latihan P4-1</a>
+        <a href="./lat42.html">Latihan P4-2</a>
+    </nav>
+
+    <!-- Konten Utama -->
+    <main class="container d-flex justify-content-center
+                 align-items-center py-5">
 
         <div class="card biodata-card">
 
             <!-- Header Profil -->
-            <div class="profile-header text-center">
+            <header class="profile-header text-center">
 
                 <div class="avatar">A</div>
 
-                <h3 class="fw-bold mb-2">
+                <h1 class="profile-name fw-bold mb-3">
                     Aan Abdurrahman Anshory
-                </h3>
+                </h1>
 
-                <p class="mb-0">
+                <p class="fs-4 mb-0">
                     Mahasiswa
                 </p>
 
-            </div>
+            </header>
 
-            <!-- Informasi Biodata -->
+            <!-- Biodata Akademik -->
             <div class="card-body p-4">
 
-                <h5 class="fw-bold mb-4">
+                <h2 class="h3 fw-bold mb-4">
                     Biodata Akademik
-                </h5>
+                </h2>
 
                 <div class="info-box">
                     <div class="info-label">
                         Nama Lengkap
                     </div>
+
                     <div class="info-value">
                         Aan Abdurrahman Anshory
                     </div>
@@ -122,6 +171,7 @@
                     <div class="info-label">
                         Kelas / Program Studi
                     </div>
+
                     <div class="info-value">
                         Komputerisasi Akuntansi
                     </div>
@@ -131,6 +181,7 @@
                     <div class="info-label">
                         Semester
                     </div>
+
                     <div class="info-value">
                         <span class="badge bg-primary">
                             Semester 1
@@ -139,7 +190,7 @@
                 </div>
 
                 <div class="text-center mt-4">
-                    <p class="text-secondary mb-0">
+                    <p class="text-secondary fs-5 mb-0">
                         Terus belajar, berkembang, dan berprestasi!
                     </p>
                 </div>
@@ -147,15 +198,15 @@
             </div>
 
             <!-- Footer -->
-            <div class="card-footer bg-white text-center py-3">
+            <footer class="card-footer bg-white text-center py-4">
                 <div class="footer-text">
                     &copy; 2026 Aan Abdurrahman Anshory
                 </div>
-            </div>
+            </footer>
 
         </div>
 
-    </div>
+    </main>
 
     <!-- Bootstrap JavaScript CDN -->
     <script
@@ -163,5 +214,5 @@
     </script>
 
 </body>
-  </html>
-  
+    </html>
+    
