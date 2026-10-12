@@ -1,219 +1,154 @@
-
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Biodata Aan Abdurrahman Anshory</title>
-
-    <!-- Bootstrap 5 CDN -->
-    <link
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-        rel="stylesheet"
-    >
+    <title>Latihan Algoritma</title>
 
     <style>
         body {
-            min-height: 100vh;
-            background: linear-gradient(135deg, #0f172a, #1d4ed8);
             font-family: Arial, sans-serif;
+            background: #eaf6fc;
+            padding: 20px;
         }
 
-        /* Navigasi latihan */
-        .navbar-latihan {
-            background-color: #ffffff;
-            padding: 12px 10px;
+        .container {
+            max-width: 500px;
+            margin: 20px auto;
         }
 
-        .navbar-latihan a {
-            color: #0d6efd !important;
-            text-decoration: underline !important;
-            font-size: 16px;
-            margin-right: 8px;
-        }
-
-        .navbar-latihan a:hover {
-            color: #084298 !important;
-        }
-
-        /* Kartu biodata */
-        .biodata-card {
-            max-width: 650px;
-            width: 100%;
-            border: none;
-            border-radius: 24px;
-            overflow: hidden;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
-        }
-
-        /* Header profil */
-        .profile-header {
-            background: linear-gradient(135deg, #2563eb, #7c3aed);
-            color: white;
-            padding: 40px 20px;
-        }
-
-        .avatar {
-            width: 100px;
-            height: 100px;
-            margin: 0 auto 25px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
+        .card {
             background: white;
-            color: #2563eb;
-            font-size: 40px;
-            font-weight: bold;
-        }
-
-        .profile-name {
-            font-size: clamp(22px, 5vw, 34px);
-            overflow-wrap: anywhere;
-        }
-
-        /* Informasi biodata */
-        .info-box {
-            background: #f8fafc;
-            padding: 22px;
+            padding: 25px;
+            margin-bottom: 20px;
             border-radius: 15px;
-            margin-bottom: 18px;
+            box-shadow: 0 4px 12px #00000015;
         }
 
-        .info-label {
-            color: #64748b;
+        h2 {
+            color: #1870f5;
+        }
+
+        input, button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 10px;
+            box-sizing: border-box;
+            border-radius: 8px;
             font-size: 16px;
-            margin-bottom: 8px;
         }
 
-        .info-value {
-            color: #0f172a;
-            font-size: 20px;
-            font-weight: 600;
+        input {
+            border: 1px solid #ccc;
+        }
+
+        button {
+            background: #1870f5;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0758d5;
+        }
+
+        .hasil {
+            background: #eaf6fc;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
             overflow-wrap: anywhere;
-        }
-
-        .footer-text {
-            font-size: 14px;
-            color: #94a3b8;
-        }
-
-        /* Penyesuaian untuk HP */
-        @media (max-width: 576px) {
-            .profile-header {
-                padding: 35px 18px;
-            }
-
-            .card-body {
-                padding: 28px !important;
-            }
-
-            .info-box {
-                padding: 18px;
-            }
-
-            .info-value {
-                font-size: 18px;
-            }
         }
     </style>
 </head>
 
 <body>
+<div class="container">
 
-    <!-- Navigasi Latihan -->
-    <nav class="navbar-latihan">
-        <a href="./lat41.html">Latihan P4-1</a>
-        <a href="./lat42.html">Latihan P4-2</a>
-        <a href="./lat.43.html">Latihan P4-3</a>
-    </nav>
+    <div class="card">
+        <h2>1. Hitung Fibonacci</h2>
+        <p>Masukkan nomor suku yang ingin dihitung.</p>
 
-    <!-- Konten Utama -->
-    <main class="container d-flex justify-content-center
-                 align-items-center py-5">
+        <label for="n">Nomor suku (N):</label>
+        <input type="number" id="n" value="20" min="1" max="1000">
 
-        <div class="card biodata-card">
+        <button onclick="hitungFibonacci()">
+            Hitung Fibonacci
+        </button>
 
-            <!-- Header Profil -->
-            <header class="profile-header text-center">
-
-                <div class="avatar">A</div>
-
-                <h1 class="profile-name fw-bold mb-3">
-                    Aan Abdurrahman Anshory
-                </h1>
-
-                <p class="fs-4 mb-0">
-                    Mahasiswa
-                </p>
-
-            </header>
-
-            <!-- Biodata Akademik -->
-            <div class="card-body p-4">
-
-                <h2 class="h3 fw-bold mb-4">
-                    Biodata Akademik
-                </h2>
-
-                <div class="info-box">
-                    <div class="info-label">
-                        Nama Lengkap
-                    </div>
-
-                    <div class="info-value">
-                        Aan Abdurrahman Anshory
-                    </div>
-                </div>
-
-                <div class="info-box">
-                    <div class="info-label">
-                        Kelas / Program Studi
-                    </div>
-
-                    <div class="info-value">
-                        Komputerisasi Akuntansi
-                    </div>
-                </div>
-
-                <div class="info-box">
-                    <div class="info-label">
-                        Semester
-                    </div>
-
-                    <div class="info-value">
-                        <span class="badge bg-primary">
-                            Semester 1
-                        </span>
-                    </div>
-                </div>
-
-                <div class="text-center mt-4">
-                    <p class="text-secondary fs-5 mb-0">
-                        Terus belajar, berkembang, dan berprestasi!
-                    </p>
-                </div>
-
-            </div>
-
-            <!-- Footer -->
-            <footer class="card-footer bg-white text-center py-4">
-                <div class="footer-text">
-                    &copy; 2026 Aan Abdurrahman Anshory
-                </div>
-            </footer>
-
+        <div class="hasil" id="hasilFib">
+            Suku ke-20 = 4181
         </div>
+    </div>
 
-    </main>
+    <div class="card">
+        <h2>2. Penjumlahan Dua Bilangan</h2>
 
-    <!-- Bootstrap JavaScript CDN -->
-    <script
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
-    </script>
+        <label for="angka1">Bilangan pertama:</label>
+        <input type="number" id="angka1" placeholder="Masukkan angka pertama">
+
+        <label for="angka2">Bilangan kedua:</label>
+        <input type="number" id="angka2" placeholder="Masukkan angka kedua">
+
+        <button onclick="jumlahkan()">
+            Hitung Jumlah
+        </button>
+
+        <div class="hasil" id="hasilJumlah">
+            Hasil penjumlahan akan muncul di sini.
+        </div>
+    </div>
+
+</div>
+
+<script>
+    // Fungsi menghitung suku Fibonacci ke-N
+    function hitungFibonacci() {
+        const n = Number(document.getElementById("n").value);
+        const hasil = document.getElementById("hasilFib");
+
+        if (!Number.isInteger(n) || n < 1 || n > 1000) {
+            hasil.textContent =
+                "Masukkan nomor suku berupa bilangan bulat 1–1000.";
+            return;
+        }
+
+        let a = 0;
+        let b = 1;
+
+        if (n === 1) {
+            hasil.textContent = "Suku ke-1 = 0";
+            return;
+        }
+
+        for (let i = 2; i < n; i++) {
+            const c = a + b;
+            a = b;
+            b = c;
+        }
+
+        hasil.textContent = "Suku ke-" + n + " = " + b;
+    }
+
+    // Fungsi menjumlahkan dua bilangan
+    function jumlahkan() {
+        const input1 = document.getElementById("angka1").value;
+        const input2 = document.getElementById("angka2").value;
+        const hasil = document.getElementById("hasilJumlah");
+
+        if (input1 === "" || input2 === "") {
+            hasil.textContent = "Silakan isi kedua bilangan.";
+            return;
+        }
+
+        const a = Number(input1);
+        const b = Number(input2);
+        const total = a + b;
+
+        hasil.textContent = a + " + " + b + " = " + total;
+    }
+</script>
 
 </body>
-    </html>
-    
+</html>
