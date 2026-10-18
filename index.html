@@ -3,152 +3,164 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Latihan Algoritma</title>
+
+    <title>Biodata Aan Abdurrahman Anshory</title>
+
+    <!-- Bootstrap 5 CDN -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
 
     <style>
         body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #0f172a, #1d4ed8);
             font-family: Arial, sans-serif;
-            background: #eaf6fc;
-            padding: 20px;
         }
 
-        .container {
-            max-width: 500px;
-            margin: 20px auto;
-        }
-
-        .card {
-            background: white;
-            padding: 25px;
-            margin-bottom: 20px;
-            border-radius: 15px;
-            box-shadow: 0 4px 12px #00000015;
-        }
-
-        h2 {
-            color: #1870f5;
-        }
-
-        input, button {
+        .biodata-card {
+            max-width: 420px;
             width: 100%;
-            padding: 12px;
-            margin-top: 10px;
-            box-sizing: border-box;
-            border-radius: 8px;
-            font-size: 16px;
-        }
-
-        input {
-            border: 1px solid #ccc;
-        }
-
-        button {
-            background: #1870f5;
-            color: white;
             border: none;
-            cursor: pointer;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
         }
 
-        button:hover {
-            background: #0758d5;
+        .profile-header {
+            background: linear-gradient(135deg, #2563eb, #7c3aed);
+            color: white;
+            padding: 35px 20px;
         }
 
-        .hasil {
-            background: #eaf6fc;
+        .avatar {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: white;
+            color: #2563eb;
+            font-size: 38px;
+            font-weight: bold;
+            border: 4px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .info-box {
+            background: #f8fafc;
             padding: 15px;
-            border-radius: 8px;
-            margin-top: 15px;
+            border-radius: 12px;
+            margin-bottom: 14px;
+        }
+
+        .info-label {
+            color: #64748b;
+            font-size: 13px;
+            margin-bottom: 5px;
+        }
+
+        .info-value {
+            color: #0f172a;
+            font-weight: 600;
             overflow-wrap: anywhere;
+        }
+
+        .footer-text {
+            font-size: 12px;
+            color: #94a3b8;
         }
     </style>
 </head>
 
 <body>
-<div class="container">
+    <section>
+        <a href="lat41.html"> Latihan P4-1 </a>
+        <a href="lat42.html"> Latihan P4-2 </a>
+        <a href="lat43.html"> Latihan P4-3 </a>
+    </section>
 
-    <div class="card">
-        <h2>1. Hitung Fibonacci</h2>
-        <p>Masukkan nomor suku yang ingin dihitung.</p>
+    <div class="container min-vh-100 d-flex
+                justify-content-center align-items-center py-4">
 
-        <label for="n">Nomor suku (N):</label>
-        <input type="number" id="n" value="20" min="1" max="1000">
+        <div class="card biodata-card">
 
-        <button onclick="hitungFibonacci()">
-            Hitung Fibonacci
-        </button>
+            <!-- Header Profil -->
+            <div class="profile-header text-center">
 
-        <div class="hasil" id="hasilFib">
-            Suku ke-20 = 4181
+                <div class="avatar">A</div>
+
+                <h3 class="fw-bold mb-2">
+                    Aan Abdurrahman Anshory
+                </h3>
+
+                <p class="mb-0">
+                    Mahasiswa
+                </p>
+
+            </div>
+
+            <!-- Informasi Biodata -->
+            <div class="card-body p-4">
+
+                <h5 class="fw-bold mb-4">
+                    Biodata Akademik
+                </h5>
+
+                <div class="info-box">
+                    <div class="info-label">
+                        Nama Lengkap
+                    </div>
+                    <div class="info-value">
+                        Aan Abdurrahman Anshory
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    <div class="info-label">
+                        Kelas / Program Studi
+                    </div>
+                    <div class="info-value">
+                        Komputerisasi Akuntansi
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    <div class="info-label">
+                        Semester
+                    </div>
+                    <div class="info-value">
+                        <span class="badge bg-primary">
+                            Semester 1
+                        </span>
+                    </div>
+                </div>
+
+                <div class="text-center mt-4">
+                    <p class="text-secondary mb-0">
+                        Terus belajar, berkembang, dan berprestasi!
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- Footer -->
+            <div class="card-footer bg-white text-center py-3">
+                <div class="footer-text">
+                    &copy; 2026 Aan Abdurrahman Anshory
+                </div>
+            </div>
+
         </div>
+
     </div>
 
-    <div class="card">
-        <h2>2. Penjumlahan Dua Bilangan</h2>
-
-        <label for="angka1">Bilangan pertama:</label>
-        <input type="number" id="angka1" placeholder="Masukkan angka pertama">
-
-        <label for="angka2">Bilangan kedua:</label>
-        <input type="number" id="angka2" placeholder="Masukkan angka kedua">
-
-        <button onclick="jumlahkan()">
-            Hitung Jumlah
-        </button>
-
-        <div class="hasil" id="hasilJumlah">
-            Hasil penjumlahan akan muncul di sini.
-        </div>
-    </div>
-
-</div>
-
-<script>
-    // Fungsi menghitung suku Fibonacci ke-N
-    function hitungFibonacci() {
-        const n = Number(document.getElementById("n").value);
-        const hasil = document.getElementById("hasilFib");
-
-        if (!Number.isInteger(n) || n < 1 || n > 1000) {
-            hasil.textContent =
-                "Masukkan nomor suku berupa bilangan bulat 1–1000.";
-            return;
-        }
-
-        let a = 0;
-        let b = 1;
-
-        if (n === 1) {
-            hasil.textContent = "Suku ke-1 = 0";
-            return;
-        }
-
-        for (let i = 2; i < n; i++) {
-            const c = a + b;
-            a = b;
-            b = c;
-        }
-
-        hasil.textContent = "Suku ke-" + n + " = " + b;
-    }
-
-    // Fungsi menjumlahkan dua bilangan
-    function jumlahkan() {
-        const input1 = document.getElementById("angka1").value;
-        const input2 = document.getElementById("angka2").value;
-        const hasil = document.getElementById("hasilJumlah");
-
-        if (input1 === "" || input2 === "") {
-            hasil.textContent = "Silakan isi kedua bilangan.";
-            return;
-        }
-
-        const a = Number(input1);
-        const b = Number(input2);
-        const total = a + b;
-
-        hasil.textContent = a + " + " + b + " = " + total;
-    }
-</script>
+    <!-- Bootstrap JavaScript CDN -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
 
 </body>
-</html>
+    </html>
